@@ -1,0 +1,41 @@
+{
+  "_name": "ShopItem",
+  "_objFlags": 0,
+  "_native": "",
+  "data": {
+    "_id": "891d50b97da34e658c5b7e2df7c19030",
+    "_name": "ShopItem",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [
+      { "__id__": "icon" },
+      { "__id__": "nameLabel" },
+      { "__id__": "priceLabel" },
+      { "__id__": "buyButton" }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Node",
+        "_name": "ShopItem",
+        "_objFlags": 0,
+        "_id": "891d50b97da34e658c5b7e2df7c19030"
+      },
+      {
+        "__type__": "cc.ShopItemRenderer",
+        "_name": "ShopItemScript",
+        "_enabled": true,
+        "nameLabel": { "__id__": "nameLabel" },
+        "priceLabel": { "__id__": "priceLabel" },
+        "buyButton": { "__type__": "cc.Button", "_name": "buyButton" }
+      }
+    ],
+    "_layerFlags": 0,
+    "_layer": 1,
+    "_position": { "x": 0, "y": 0, "z": 0 },
+    "_rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
+    "_scale": { "x": 1, "y": 1, "z": 1 },
+    "_eulerAngles": { "x": 0, "y": 0, "z": 0 },
+    "_anchorPoint": { "x": 0.5, "y": 0.5 },
+    "_contentSize": { "width": 200, "height": 250 }
+  }
+}

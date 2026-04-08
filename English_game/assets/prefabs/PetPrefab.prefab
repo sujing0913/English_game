@@ -1,0 +1,42 @@
+{
+  "_name": "PetPrefab",
+  "_objFlags": 0,
+  "_native": "",
+  "data": {
+    "_id": "c6e6adef4b8248aeaef95dff16848bd1",
+    "_name": "PetPrefab",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [
+      { "__id__": "sprite" },
+      { "__id__": "petName" },
+      { "__id__": "hunger" },
+      { "__id__": "level" },
+      { "__id__": "feedButton" }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Node",
+        "_name": "PetPrefab",
+        "_objFlags": 0,
+        "_id": "c6e6adef4b8248aeaef95dff16848bd1"
+      },
+      {
+        "__type__": "cc.Pet",
+        "_name": "PetScript",
+        "_enabled": true,
+        "petNameLabel": { "__id__": "petName" },
+        "hungerLabel": { "__id__": "hunger" },
+        "levelLabel": { "__id__": "level" }
+      }
+    ],
+    "_layerFlags": 0,
+    "_layer": 1,
+    "_position": { "x": 0, "y": 0, "z": 0 },
+    "_rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
+    "_scale": { "x": 1, "y": 1, "z": 1 },
+    "_eulerAngles": { "x": 0, "y": 0, "z": 0 },
+    "_anchorPoint": { "x": 0.5, "y": 0.5 },
+    "_contentSize": { "width": 200, "height": 250 }
+  }
+}

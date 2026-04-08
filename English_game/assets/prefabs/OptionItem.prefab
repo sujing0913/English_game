@@ -1,0 +1,45 @@
+{
+  "_name": "OptionItem",
+  "_objFlags": 0,
+  "_native": "",
+  "data": {
+    "_id": "4bd13f4ffca14f70a246942c0030b4a6",
+    "_name": "OptionItem",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [
+      { "__id__": "bg" },
+      { "__id__": "label" }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Node",
+        "_name": "OptionItem",
+        "_objFlags": 0,
+        "_id": "4bd13f4ffca14f70a246942c0030b4a6"
+      },
+      {
+        "__type__": "cc.Button",
+        "_name": "Button",
+        "_enabled": true,
+        "target": { "__id__": "bg" },
+        "clickEvents": []
+      },
+      {
+        "__type__": "cc.OptionItem",
+        "_name": "OptionItemScript",
+        "_enabled": true,
+        "meaningLabel": { "__id__": "label" },
+        "selectButton": { "__type__": "cc.Button", "_name": "Button" }
+      }
+    ],
+    "_layerFlags": 0,
+    "_layer": 1,
+    "_position": { "x": 0, "y": 0, "z": 0 },
+    "_rotation": { "x": 0, "y": 0, "z": 0, "w": 1 },
+    "_scale": { "x": 1, "y": 1, "z": 1 },
+    "_eulerAngles": { "x": 0, "y": 0, "z": 0 },
+    "_anchorPoint": { "x": 0.5, "y": 0.5 },
+    "_contentSize": { "width": 250, "height": 60 }
+  }
+}

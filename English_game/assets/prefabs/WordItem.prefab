@@ -1,0 +1,63 @@
+{
+  "_name": "WordItem",
+  "_objFlags": 0,
+  "_native": "",
+  "data": {
+    "_id": "1a9a2c0749bf4cdda5971f8c0e4b82e5",
+    "_name": "WordItem",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [
+      {
+        "__id__": "wordLabel"
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Node",
+        "_name": "WordItem",
+        "_objFlags": 0,
+        "_id": "1a9a2c0749bf4cdda5971f8c0e4b82e5"
+      },
+      {
+        "__type__": "cc.WordItem",
+        "_name": "WordItemScript",
+        "_enabled": true,
+        "wordLabel": {
+          "__id__": "wordLabel"
+        }
+      }
+    ],
+    "_layerFlags": 0,
+    "_layer": 1,
+    "_position": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_anchorPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "width": 200,
+      "height": 50
+    }
+  }
+}
