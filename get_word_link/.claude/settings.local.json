@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(where python:*)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe -c \"import selenium; print\\('selenium ok'\\)\")",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe -m pip install selenium)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe get_stroke_gif.py 2>&1)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe -c \"from chinese_3500_chars import ALL_CHARS_3500; print\\(len\\(ALL_CHARS_3500\\)\\)\")",
+      "WebFetch(domain:zh.wikipedia.org)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe -c \"from chinese_3500_chars import ALL_CHARS_3500; print\\('汉字数量：' + str\\(len\\(ALL_CHARS_3500\\)\\)\\)\")",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python.exe get_stroke_gif.py 2>&1 | tee stroke_scraper.log)",
+      "Bash(wmic process:*)",
+      "Bash(kill:*)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python get_stroke_gif.py 2>&1)",
+      "WebSearch",
+      "WebFetch(domain:baike.baidu.com)",
+      "WebFetch(domain:www.aies.cn)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python fix_chars.py 2>&1)",
+      "WebFetch(domain:zh.wiktionary.org)",
+      "WebFetch(domain:www.jianshu.com)",
+      "WebFetch(domain:www.moe.gov.cn)",
+      "WebFetch(domain:tool.lu)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:blog.csdn.net)",
+      "WebFetch(domain:www.zdic.net)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python -c \"from chinese_3500_chars import ALL_CHARS_3500; print\\(len\\(ALL_CHARS_3500\\)\\)\")",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.unihan.net)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python chinese_3500_chars.py)",
+      "Bash(/c/users/administrator/appdata/local/programs/python/Python310/python fix_invalid_gif.py 2>&1)"
+    ]
+  }
+}

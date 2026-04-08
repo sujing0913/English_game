@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    "types": ["@cocos/creator-types/editor", "@cocos/creator-types/engine"],
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "outDir": "./temp/typings",
+    "rootDir": "./assets"
+  },
+  "include": [
+    "assets/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "library",
+    "local",
+    "temp"
+  ]
+}

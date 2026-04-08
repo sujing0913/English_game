@@ -1,0 +1,26 @@
+[
+  {
+    "url": "db://assets/scripts/GameManager.ts",
+    "uuid": "20000000-0000-0000-0000-000000000001"
+  },
+  {
+    "url": "db://assets/scripts/WordItem.ts",
+    "uuid": "20000000-0000-0000-0000-000000000002"
+  },
+  {
+    "url": "db://assets/scripts/OptionItem.ts",
+    "uuid": "20000000-0000-0000-0000-000000000003"
+  },
+  {
+    "url": "db://assets/scripts/Pet.ts",
+    "uuid": "20000000-0000-0000-0000-000000000004"
+  },
+  {
+    "url": "db://assets/scripts/ShopManager.ts",
+    "uuid": "20000000-0000-0000-0000-000000000005"
+  },
+  {
+    "url": "db://assets/scripts/ShopItemRenderer.ts",
+    "uuid": "20000000-0000-0000-0000-000000000006"
+  }
+]

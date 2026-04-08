@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene version="2.0" cc-wasm-enabled="false">
+  <root>
+    <node name="Canvas" cc-id="canvas" cc-class="Node">
+      <node cc-class="Node" cc-name="Main Camera">
+        <component cc-class="Camera" cc-enabled="true"/>
+      </node>
+      <node cc-class="Node" cc-name="ShopManager">
+        <component cc-class="ShopManager" cc-enabled="true">
+          <property name="coinLabel" type="Object" cc-node="coinLabel"/>
+          <property name="shopContainer" type="Object" cc-node="shopContainer"/>
+        </component>
+      </node>
+      <node cc-class="Node" cc-name="UI">
+        <node cc-class="Node" cc-name="CoinPanel">
+          <node cc-class="Node" cc-name="coinLabel">
+            <component cc-class="Label" cc-enabled="true">
+              <property name="string">金币：0</property>
+            </component>
+          </node>
+        </node>
+        <node cc-class="Node" cc-name="BackButton">
+          <component cc-class="Button" cc-enabled="true">
+            <property name="clickEvents">
+              <array>
+                <item>
+                  <property name="target" type="Object" cc-node="ShopManager"/>
+                  <property name="component">ShopManager</property>
+                  <property name="handler">backToMain</property>
+                </item>
+              </array>
+            </property>
+          </component>
+          <node cc-class="Node" cc-name="Label">
+            <component cc-class="Label" cc-enabled="true">
+              <property name="string">返回</property>
+            </component>
+          </node>
+        </node>
+      </node>
+      <node cc-class="Node" cc-name="ShopContainer" cc-name="shopContainer"/>
+    </node>
+  </root>
+</scene>

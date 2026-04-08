@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(git remote:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe -c \"print\\('hello'\\)\")",
+      "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe -c \"\nfrom docx import Document\ndoc = Document\\('D:/claude_code/English_game/需求说明.docx'\\)\nfor p in doc.paragraphs:\n    if p.text.strip\\(\\):\n        print\\(p.text\\)\n\")",
+      "Bash(git:*)"
     ]
   }
 }

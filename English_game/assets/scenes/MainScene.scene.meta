@@ -1,0 +1,10 @@
+[
+  {
+    "ver": "1.0.0",
+    "uuid": "10000000-0000-0000-0000-000000000001",
+    "importer": "scene",
+    "asyncLoadAssets": false,
+    "autoReleaseAssets": false,
+    "subMetas": {}
+  }
+]

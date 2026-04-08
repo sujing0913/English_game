@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scene version="2.0" cc-wasm-enabled="false">
+  <root>
+    <node name="Canvas" cc-id="canvas" cc-class="Node">
+      <node cc-class="Node" cc-name="Main Camera">
+        <component cc-class="Camera" cc-enabled="true"/>
+      </node>
+      <node cc-class="Node" cc-name="GameManager">
+        <component cc-class="GameManager" cc-enabled="true">
+          <property name="scoreLabel" type="Object" cc-node="scoreLabel"/>
+          <property name="coinLabel" type="Object" cc-node="coinLabel"/>
+          <property name="wordContainer" type="Object" cc-node="wordContainer"/>
+          <property name="optionContainer" type="Object" cc-node="optionContainer"/>
+        </component>
+      </node>
+      <node cc-class="Node" cc-name="UI">
+        <node cc-class="Node" cc-name="ScorePanel">
+          <node cc-class="Node" cc-name="scoreLabel">
+            <component cc-class="Label" cc-enabled="true">
+              <property name="string">Score: 0</property>
+            </component>
+          </node>
+        </node>
+        <node cc-class="Node" cc-name="CoinPanel">
+          <node cc-class="Node" cc-name="coinLabel">
+            <component cc-class="Label" cc-enabled="true">
+              <property name="string">Coins: 0</property>
+            </component>
+          </node>
+        </node>
+        <node cc-class="Node" cc-name="ShopButton">
+          <component cc-class="Button" cc-enabled="true">
+            <property name="clickEvents">
+              <array>
+                <item>
+                  <property name="target" type="Object" cc-node="GameManager"/>
+                  <property name="component">GameManager</property>
+                  <property name="handler">goToShop</property>
+                </item>
+              </array>
+            </property>
+          </component>
+          <node cc-class="Node" cc-name="Label">
+            <component cc-class="Label" cc-enabled="true">
+              <property name="string">商店</property>
+            </component>
+          </node>
+        </node>
+      </node>
+      <node cc-class="Node" cc-name="WordContainer" cc-name="wordContainer"/>
+      <node cc-class="Node" cc-name="OptionContainer" cc-name="optionContainer"/>
+      <node cc-class="Node" cc-name="Pet">
+        <component cc-class="Pet" cc-enabled="true">
+          <property name="petNameLabel" type="Object" cc-node="PetName"/>
+          <property name="hungerLabel" type="Object" cc-node="Hunger"/>
+          <property name="levelLabel" type="Object" cc-node="Level"/>
+        </component>
+        <node cc-class="Node" cc-name="PetName">
+          <component cc-class="Label" cc-enabled="true"/>
+        </node>
+        <node cc-class="Node" cc-name="Hunger">
+          <component cc-class="Label" cc-enabled="true"/>
+        </node>
+        <node cc-class="Node" cc-name="Level">
+          <component cc-class="Label" cc-enabled="true"/>
+        </node>
+      </node>
+    </node>
+  </root>
+</scene>

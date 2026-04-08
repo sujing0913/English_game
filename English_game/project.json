@@ -1,0 +1,12 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "https://registry.npmjs.org/",
+  "version": "3.8.0",
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "name": "EnglishGame",
+  "canvas": {
+    "width": 750,
+    "height": 1334
+  },
+  "startScene": "assets/scenes/MainScene.scene"
+}

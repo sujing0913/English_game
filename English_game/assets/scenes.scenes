@@ -1,0 +1,10 @@
+[
+  {
+    "url": "db://assets/scenes/MainScene.scene",
+    "uuid": "10000000-0000-0000-0000-000000000001"
+  },
+  {
+    "url": "db://assets/scenes/ShopScene.scene",
+    "uuid": "10000000-0000-0000-0000-000000000002"
+  }
+]

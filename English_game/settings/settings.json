@@ -1,0 +1,20 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 750,
+      "height": 1334,
+      "policy": 4
+    }
+  },
+  "scripting": {
+    "scriptCompileMode": "debug",
+    "scriptDebugMode": false,
+    "libs": {
+      "native": [],
+      "web": []
+    }
+  },
+  "physics": {
+    "physicsEngine": "builtin"
+  }
+}
