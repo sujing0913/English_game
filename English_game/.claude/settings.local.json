@@ -14,7 +14,8 @@
       "Bash(dir:*)",
       "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe \"D:\\\\claude_code\\\\English_game\\\\tools\\\\generate_resources.py\")",
       "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe \"D:\\\\claude_code\\\\English_game\\\\tools\\\\generate_sprites.py\")",
-      "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe -m pip install requests pillow -q)"
+      "Bash(/c/Users/Administrator/AppData/Local/Programs/Python/Python38/python.exe -m pip install requests pillow -q)",
+      "Bash(echo:*)"
     ]
   }
 }
