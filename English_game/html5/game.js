@@ -75,23 +75,23 @@ function updateUI() {
 // 生成单词
 function spawnWord() {
     const gameArea = document.getElementById('gameArea');
+
+    // 清除之前的单词
+    const oldWords = gameArea.querySelectorAll('.falling-word');
+    oldWords.forEach(w => w.remove());
+
     const randomIndex = Math.floor(Math.random() * wordBank.length);
     currentWord = wordBank[randomIndex];
 
     const wordElement = document.createElement('div');
     wordElement.className = 'falling-word';
     wordElement.textContent = currentWord.word;
-    wordElement.style.left = Math.random() * 200 + 50 + 'px';
-    wordElement.style.animationDuration = (Math.random() * 3 + 5) + 's';
+    wordElement.style.left = (Math.random() * 200 + 50) + 'px';
+    wordElement.style.top = '-50px';
 
     gameArea.appendChild(wordElement);
 
-    // 动画结束后移除
-    setTimeout(() => {
-        if (wordElement.parentNode) {
-            wordElement.remove();
-        }
-    }, 8000);
+    console.log('生成单词:', currentWord.word);
 }
 
 // 生成选项

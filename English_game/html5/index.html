@@ -109,7 +109,8 @@
 
         /* 游戏区域 */
         .game-area {
-            flex: 1;
+            width: 100%;
+            height: 250px;
             position: relative;
             overflow: hidden;
             background: #f8f9fa;
@@ -117,6 +118,7 @@
 
         .falling-word {
             position: absolute;
+            top: -50px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             padding: 10px 20px;
@@ -127,7 +129,8 @@
         }
 
         @keyframes fall {
-            to { transform: translateY(400px); }
+            from { transform: translateY(-50px); }
+            to { transform: translateY(300px); }
         }
 
         /* 选项区域 */
