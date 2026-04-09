@@ -42,11 +42,13 @@ let isProcessing = false;
 
 // 初始化游戏
 function initGame() {
+    console.log('🎮 游戏初始化...');
     loadGameData();
     updateUI();
     spawnWord();
     generateOptions();
     startHungerTimer();
+    console.log('✅ 游戏初始化完成！');
 }
 
 // 加载保存的数据
@@ -54,6 +56,7 @@ function loadGameData() {
     const saved = localStorage.getItem('englishGameSave');
     if (saved) {
         gameState = JSON.parse(saved);
+        console.log('📂 加载存档:', gameState);
     }
 }
 
@@ -72,26 +75,43 @@ function updateUI() {
     document.getElementById('levelValue').textContent = gameState.pet.level;
 }
 
-// 生成单词
+// 生成单词 - 单词从这里落下
 function spawnWord() {
     const gameArea = document.getElementById('gameArea');
+    console.log('🎯 游戏区域:', gameArea);
 
     // 清除之前的单词
     const oldWords = gameArea.querySelectorAll('.falling-word');
-    oldWords.forEach(w => w.remove());
+    oldWords.forEach(w => {
+        console.log('移除旧单词:', w.textContent);
+        w.remove();
+    });
 
     const randomIndex = Math.floor(Math.random() * wordBank.length);
     currentWord = wordBank[randomIndex];
+    console.log('📝 生成单词:', currentWord.word);
 
+    // 创建单词元素
     const wordElement = document.createElement('div');
     wordElement.className = 'falling-word';
     wordElement.textContent = currentWord.word;
-    wordElement.style.left = (Math.random() * 200 + 50) + 'px';
-    wordElement.style.top = '-50px';
+    wordElement.style.left = (Math.random() * 200 + 20) + 'px';
+
+    console.log('🔨 创建单词元素:', wordElement);
+    console.log('  - class:', wordElement.className);
+    console.log('  - text:', wordElement.textContent);
+    console.log('  - left:', wordElement.style.left);
 
     gameArea.appendChild(wordElement);
+    console.log('✅ 单词已添加到游戏区域');
 
-    console.log('生成单词:', currentWord.word);
+    // 动画结束后移除
+    setTimeout(() => {
+        if (wordElement.parentNode) {
+            wordElement.remove();
+            console.log('🗑️ 单词动画结束，已移除');
+        }
+    }, 3000);
 }
 
 // 生成选项
@@ -119,6 +139,8 @@ function generateOptions() {
         btn.onclick = () => selectOption(option, btn);
         optionsArea.appendChild(btn);
     });
+
+    console.log('✅ 选项已生成');
 }
 
 // 选择选项
@@ -174,6 +196,7 @@ function feedPet() {
 
     updateUI();
     saveGameData();
+    showMessage('🍎 喂养成功！');
 }
 
 // 饥饿计时器
@@ -245,12 +268,11 @@ function buyItem(itemId) {
             level: 1,
             exp: 0
         };
-        showMessage(`获得了 ${item.name}！`);
-        // 购买宠物后不关闭商店，可以继续浏览
+        showMessage(`🎉 获得了 ${item.name}！`);
     } else if (item.type === 'item') {
         if (item.name === '高级饲料') {
             gameState.pet.hunger = Math.min(100, gameState.pet.hunger + 50);
-            showMessage(`使用了 ${item.name}！饥饿 +50`);
+            showMessage(`🍖 使用了 ${item.name}！饥饿 +50`);
         } else if (item.name === '经验药水') {
             gameState.pet.exp += 50;
             // 检查升级
@@ -259,7 +281,7 @@ function buyItem(itemId) {
                 gameState.pet.exp = 0;
                 showMessage('⭐ 升级了！');
             } else {
-                showMessage(`使用了 ${item.name}！经验 +50`);
+                showMessage(`⭐ 使用了 ${item.name}！经验 +50`);
             }
         }
         updateUI();
@@ -275,5 +297,8 @@ function buyItem(itemId) {
     openShop();
 }
 
-// 启动游戏
-initGame();
+// 等待 DOM 加载完成后再初始化
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📄 DOM 加载完成，初始化游戏...');
+    initGame();
+});

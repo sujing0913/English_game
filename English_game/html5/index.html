@@ -107,13 +107,15 @@
             transform: scale(1.05);
         }
 
-        /* 游戏区域 */
+        /* 游戏区域 - 单词下落的地方 */
         .game-area {
             width: 100%;
-            height: 250px;
+            height: 200px;
             position: relative;
             overflow: hidden;
-            background: #f8f9fa;
+            background: #e8eaf6;
+            border-top: 2px solid #667eea;
+            border-bottom: 2px solid #667eea;
         }
 
         .falling-word {
@@ -121,23 +123,30 @@
             top: -50px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 18px;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 20px;
             font-weight: bold;
-            animation: fall linear forwards;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            animation: fall 3s linear forwards;
         }
 
         @keyframes fall {
-            from { transform: translateY(-50px); }
-            to { transform: translateY(300px); }
+            0% {
+                top: -50px;
+                opacity: 1;
+            }
+            100% {
+                top: 200px;
+                opacity: 0.5;
+            }
         }
 
         /* 选项区域 */
         .options-area {
             padding: 15px;
             background: white;
-            border-top: 2px solid #eee;
+            flex: 1;
         }
 
         .option-btn {
@@ -170,7 +179,7 @@
         /* 商店按钮 */
         .shop-btn {
             position: absolute;
-            bottom: 170px;
+            bottom: 180px;
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, #f093fb, #f5576c);
@@ -181,6 +190,11 @@
             font-size: 16px;
             cursor: pointer;
             z-index: 100;
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+        }
+
+        .shop-btn:hover {
+            transform: translateX(-50%) scale(1.05);
         }
 
         /* 消息提示 */
@@ -218,6 +232,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
         }
 
         .close-btn {
@@ -300,7 +316,7 @@
             <button class="feed-btn" onclick="feedPet()">🍎 喂养</button>
         </div>
 
-        <!-- 游戏区域 -->
+        <!-- 游戏区域 - 单词从这里落下 -->
         <div class="game-area" id="gameArea">
             <div class="message" id="message"></div>
         </div>
