@@ -246,18 +246,33 @@ function buyItem(itemId) {
             exp: 0
         };
         showMessage(`获得了 ${item.name}！`);
+        // 购买宠物后不关闭商店，可以继续浏览
     } else if (item.type === 'item') {
         if (item.name === '高级饲料') {
             gameState.pet.hunger = Math.min(100, gameState.pet.hunger + 50);
+            showMessage(`使用了 ${item.name}！饥饿 +50`);
         } else if (item.name === '经验药水') {
             gameState.pet.exp += 50;
+            // 检查升级
+            if (gameState.pet.exp >= gameState.pet.level * 100) {
+                gameState.pet.level++;
+                gameState.pet.exp = 0;
+                showMessage('⭐ 升级了！');
+            } else {
+                showMessage(`使用了 ${item.name}！经验 +50`);
+            }
         }
-        showMessage(`使用了 ${item.name}！`);
+        updateUI();
+        saveGameData();
+        // 消耗品使用后关闭商店
+        closeShop();
+        return;
     }
 
     updateUI();
     saveGameData();
-    closeShop();
+    // 重新渲染商店（更新按钮状态）
+    openShop();
 }
 
 // 启动游戏
