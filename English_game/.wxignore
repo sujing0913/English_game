@@ -1,0 +1,27 @@
+# 忽略测试文件
+**/__tests__/**
+**/*.test.js
+
+# 忽略 node_modules（所有云函数目录）
+cloudfunctions/*/node_modules/**
+cloudfunctions/**/node_modules/**
+
+# 忽略 Cocos Creator 生成的大型目录
+library/**
+temp/**
+.profiler/**
+.local/**
+
+# 忽略日志和临时文件
+**/*.log
+**/npm-debug.log*
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+.vscode/**
+
+# 忽略其他项目目录
+../freelancework/**
+../zshield_workspace/**
+../完整手抄用/**

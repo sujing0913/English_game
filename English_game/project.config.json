@@ -3,9 +3,7 @@
   "compileType": "game",
   "libVersion": "3.15.2",
   "cloudfunctionRoot": "cloudfunctions/",
-  "cloudbaseRoot": {
-    "envId": "cloud1-5gffqq3ue6220039"
-  },
+  "cloudfunctionID": "cloud1-5gffqq3ue6220039",
   "packOptions": {
     "ignore": [],
     "include": []
@@ -23,7 +21,8 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "urlCheck": false
   },
   "condition": {},
   "editorSetting": {
